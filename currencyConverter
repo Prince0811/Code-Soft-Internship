@@ -1,0 +1,51 @@
+import java.util.*;
+class Main{
+    public static double rupeeToUSD(double rupee){
+            return rupee*0.012;
+    }
+    public static double usdToRupee(double USD){
+        return USD*84.03;
+    }
+    public static double euroToRupee(double Euro){
+        return Euro*93.06;
+    }
+    public static double rupeeToEuro(double ruppe){
+        return ruppe*0.011;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Welcome to Currency Converter");
+        System.out.println("Enter 1 for USD to Rupee");
+        System.out.println("Entet 2 for Rupee to USD");
+        System.out.println("Enter 3 for Euro to Rupee");
+        System.out.println("Enter 4 for Rupee to Euro");
+        System.out.println("Enter the number");
+        int choice =sc.nextInt();
+
+        if(choice==1){
+            System.out.println("Enter the amount in USD");
+            double USD=sc.nextDouble();
+            double Rupee=usdToRupee(USD);
+            System.out.println("Converted amount is"+Rupee);
+        }
+        else if(choice==2){
+            System.out.println("Enter the amount in Ruppee");
+            double Rupee=sc.nextDouble();
+            double USD=rupeeToUSD(Rupee);
+            System.out.println("Converted amount is"+USD);
+        }else if(choice==3){
+            System.out.println("Enter the amount in Euro");
+            double Euro=sc.nextDouble();
+            double Ruppee=euroToRupee(Euro);
+            System.out.println("Converted amount is"+Ruppee);
+        }
+        else if(choice==4){
+            System.out.println("Enter the amount in Rupee");
+            double Rupee=sc.nextDouble();
+            double Euro=rupeeToEuro(Rupee);
+            System.out.println("Converted amount is"+Euro);
+        }else{
+            System.out.println("Invalid choice");
+        }
+    }
+}
